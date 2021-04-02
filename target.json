@@ -1,0 +1,7 @@
+{
+  "web": {
+    "baseUrl": "https://api.develop.thebitbybit.com/discuss/test-selenium/map/display",
+    "user": "selenium",
+    "password": "TestSelenium"
+  }
+}
