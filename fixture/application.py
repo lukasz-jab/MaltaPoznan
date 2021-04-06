@@ -1,5 +1,6 @@
 from selenium import webdriver
 
+from fixture.inscription import InscriptionHelper
 from fixture.navigation import NavigationHelper
 from fixture.session import SessionHelper
 
@@ -14,9 +15,10 @@ class Application:
             raise ValueError("Unrecognized browser %s" % browser)
         self.wd.maximize_window()
         self.base_url = base_url
-        self.wd.implicitly_wait(5)
+        self.wd.implicitly_wait(20)
         self.session = SessionHelper(self)
         self.navigation = NavigationHelper(self)
+        self.inscription = InscriptionHelper(self)
 
     def destroy(self):
         self.wd.quit()
